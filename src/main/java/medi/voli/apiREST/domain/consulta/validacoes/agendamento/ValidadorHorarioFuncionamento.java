@@ -1,0 +1,24 @@
+package medi.voli.apiREST.domain.consulta.validacoes.agendamento;
+
+import medi.voli.apiREST.domain.ValidacaoException;
+import medi.voli.apiREST.domain.consulta.DadosAgendamento;
+import org.springframework.stereotype.Component;
+
+import java.time.DayOfWeek;
+
+@Component
+public class ValidadorHorarioFuncionamento implements ValidadorAgendamentoConsulta {
+
+    public void validar(DadosAgendamento dados){
+        var dataConsulta =dados.data();
+
+        var domingo = dataConsulta.getDayOfWeek().equals(DayOfWeek.SUNDAY);
+        var antesDaAberturaDaClinica = dataConsulta.getHour() < 7;
+        var depoisDoEncerramentoDaClinica = dataConsulta.getHour() > 18;
+
+        if(domingo || antesDaAberturaDaClinica || depoisDoEncerramentoDaClinica){
+            throw new ValidacaoException("Consulta fora do horario de funcionamento");
+        }
+
+    }
+}

@@ -11,6 +11,6 @@
 
 ## Descrição do projeto
 
-### Projeto criado com a intenção de estudar como criar um servidor para uma clinica medica que tem um app que precisa das funções de agendamento de consulta e cadastro de médicos e pacientes 
+### Projeto criado com a intenção de estudar como criar um servidor para uma clinica medica que tem um app que precisa das funções de agendamento de consulta e cadastro de médicos e pacientes e com autenticação utilizando JWT
 
 

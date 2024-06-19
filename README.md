@@ -5,9 +5,12 @@
 - **Java 17**
 - **Spring Boot 3**
 - **Spring Data JPA**
+- **Spring Security**
+- **Auth0**
 - **OpenAPI (Swagger)**
 - **Mysql**
 - **Railway**
+
 
 ## Descrição do projeto
 
